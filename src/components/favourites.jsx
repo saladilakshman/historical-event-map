@@ -4,12 +4,12 @@ import { EventsAppState } from "../App";
 const Favourites = () => {
   const { state, dispatch } = useContext(EventsAppState);
   return (
-    <div className="lg:col-span-3 border-2 border-gray-600 rounded-lg p-2 lg:overflow-auto ">
+    <div className="lg:col-span-3 border-2 border-gray-600 rounded-lg p-2 overflow-auto ">
       <h2 className="text-white pb-3 text-base lg:text-xl border-b-2 border-b-gray-600">
         Favourites
       </h2>
       <div
-        className="flex lg:flex-col gap-2 max-sm:flex-start overflow-auto mt-2 "
+        className="flex lg:flex-col gap-2 whitespace-nowrap overflow-auto mt-2"
         id="bar"
       >
         {state?.favouriteslist?.length === 0 ? (
