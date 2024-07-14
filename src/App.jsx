@@ -9,8 +9,8 @@ function App() {
     AllEvents: Events,
     favouriteslist: [],
     isaddedtofavourites: false,
-    selectedoption: null,
-    coordinatepositiontoshow: null,
+    selectedoption: undefined,
+    coordinatepositiontoshow: undefined,
     activateflymotion: false,
   };
 
@@ -18,6 +18,7 @@ function App() {
     if (action.type === "add-to-favourites") {
       return {
         ...state,
+        activateflymotion: false,
         isaddedtofavourites: true,
         favouriteslist: [...state.favouriteslist, action.payload],
       };
@@ -28,6 +29,7 @@ function App() {
       );
       return {
         ...state,
+        activateflymotion: false,
         isaddedtofavourites: false,
         favouriteslist: removeevent,
       };
